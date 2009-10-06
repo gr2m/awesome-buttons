@@ -16,5 +16,6 @@ h2. Install as Plugin for Rails
 go to your public folder and run
 
 <pre>
-$ ../script/plugin install git://github.com/pjhyett/auto_migrations.git
+$ git clone git://github.com/gr2m/awesome-buttons.git
+$ rm -rf .git
 </pre>
