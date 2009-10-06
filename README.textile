@@ -1,0 +1,20 @@
+h1. Super Awesome Buttons with CSS3 and RGBA
+
+Awesome buttons have been created by the great guys from ZERB.
+
+Read there blog post for more information:
+"Super Awesome Buttons with CSS3 and RGBA":http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+
+
+h2. Demo 
+
+"See the buttons in action":http://www.zurb.com/blog_uploads/0000/0485/buttons-02.html
+
+
+h2. Install as Plugin for Rails
+
+go to your public folder and run
+
+<pre>
+$ ../script/plugin install git://github.com/pjhyett/auto_migrations.git
+</pre>

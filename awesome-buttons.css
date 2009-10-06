@@ -1,0 +1,21 @@
+/*  
+    Awesome buttons are based on a blog post by ZERB
+    Read there blog post for more information:
+    "Super Awesome Buttons with CSS3 and RGBA":http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba 
+    
+    the only difference is an additional graphic for the :hover status,
+    so you don't need to set different colors for different states.
+*/
+
+/* set an awesome background color for the buttons */
+.awesome {
+  background-color: #222;
+}
+ 
+/* Touch the rest at your onw risk. */
+.awesome                    { background-image: url(awesome-overlay.png); background-repeat: repeat-x; display: inline-block; padding: 5px 10px 6px; color: #fff; text-decoration: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); border-bottom: 1px solid rgba(0,0,0,0.25); position: relative; cursor: pointer;}
+.awesome:hover							{ background-image: url(awesome-overlay-hover.png); color: #fff; }
+.awesome:active							{ top: 1px; }
+.small.awesome 			        { font-size: 11px; }
+.awesome, .medium.awesome 	{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.large.awesome  	          { font-size: 14px; padding: 8px 14px 9px; }
