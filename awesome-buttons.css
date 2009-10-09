@@ -3,36 +3,88 @@
     Read there blog post for more information:
     "Super awesome Buttons with CSS3 and RGBA":http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba 
     
-    I merge the awesome cross browser inline block hack for more stability
-    http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/
-    
-    the only difference is an additional graphic for the :hover status,
-    so you don't need to set different colors for different states.
+    this buttons are even more awesome, as the need only one color for all three states,
+    and have an super awesome onclick state
 */
 
-/* set an button.awesome, input.awesome, a.button.awesomebackground color for the buttons */
+/* set an awesome color for the buttons */
 button.awesome, 
 input.awesome, 
 a.button.awesome {
   background-color: #111;
+}
+/* Touch the rest at your onw risk. */
+button.awesome,
+input.awesome,
+a.button.awesome { 
+
   font: inherit;
-  background-image: url(awesome-overlay-sprite.png);
+  background-repeat: repeat-x; 
+  color: #fff;
+  text-decoration: none; 
+  position: relative; 
+  cursor: pointer; 
+  border: 0; 
+  font-style: normal; 
+  font-weight: bold; 
+  line-height: 1; 
   
+  /* IE only stuff */
+  border-bottom: 1px solid transparent\9;
+  
+  
+  /* not all browser support these, but who cares? */
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
+  border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  
+  /* one image for all states 
+     see http://www.alistapart.com/articles/sprites */
+  background-image: url(awesome-overlay-sprite.png);
+  background-position: 0 0;
+  
+  /* cross browser inline block hack 
+     see http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  zoom: 1;
   *display: inline !important;
   position: relative;
+  
+  /* help IE to calm down a bit */
+  zoom: 1;
+  
+  /*disable text selection (Firefox only)*/
+  -moz-user-select: none;
 }
+/* hide selection background color */
 .awesome::selection {
 	background: transparent;
 }
- 
-/* Touch the rest at your onw risk. */
-button.awesome,               input.awesome,                a.button.awesome                { background-position: 0 0; background-repeat: repeat-x; color: #fff; text-decoration: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5); text-shadow: 0 -1px 1px rgba(0,0,0,0.25); border-bottom: 1px solid rgba(0,0,0,0.25); position: relative; cursor: pointer; border: 0; font-style: normal; font-weight: bold; line-height: 1; -moz-user-select: none;}
-button.awesome:hover,         input.awesome:hover,          a.button.awesome:hover	        { background-position: 0 -50px; color: #fff; }
-button.awesome:active,        input.awesome:active,         a.button.awesome:active	        { background-position: 0 100%; -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.7); -webkit-box-shadow: none;  }
+
+button.awesome:hover,
+input.awesome:hover,
+a.button.awesome:hover {
+  background-position: 0 -50px; 
+  color: #fff;
+}
+button.awesome:active,
+input.awesome:active,
+a.button.awesome:active	{ 
+  background-position: 0 100%; 
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
+  /* unfortunately, Safari seems not to support inset yet */
+  -webkit-box-shadow: none;
+  
+  /* IE only stuff */
+  border-bottom: 0\9;
+  border-top: 1px solid #666\9;
+}
+
+
 button.awesome.small,         input.awesome.small,          a.button.awesome.small 	        { padding: 4px 7px 5px; font-size: 10px; }
 button.awesome.small:active,  input.awesome.small:active,   a.button.awesome.small:active	  { padding: 5px 7px 4px; }
 button.awesome.medium,        input.awesome.medium,         a.button.awesome.medium         { padding: 5px 10px 6px; font-size: 13px; }
