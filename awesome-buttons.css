@@ -29,6 +29,9 @@ a.button.awesome {
   font-weight: bold; 
   line-height: 1; 
   
+  padding: 5px 10px 6px;
+  font-size: 13px;
+  
   /* IE only stuff */
   border-bottom: 1px solid transparent\9;
   
@@ -84,10 +87,9 @@ a.button.awesome:active	{
   border-top: 1px solid #666\9;
 }
 
-
 button.awesome.small,         input.awesome.small,          a.button.awesome.small 	        { padding: 4px 7px 5px; font-size: 10px; }
 button.awesome.small:active,  input.awesome.small:active,   a.button.awesome.small:active	  { padding: 5px 7px 4px; }
-button.awesome.medium,        input.awesome.medium,         a.button.awesome.medium         { padding: 5px 10px 6px; font-size: 13px; }
+button.awesome.medium,        input.awesome.medium,         a.button.awesome.medium         { /* default */ }
 button.awesome.medium:active, input.awesome.medium:active,  a.button.awesome.medium:active	{ padding: 6px 10px 5px; }
 button.awesome.large,         input.awesome.large,          a.button.awesome.large 	        { padding: 8px 14px 9px; font-size: 14px; }
 button.awesome.large:active,  input.awesome.large:active,   a.button.awesome.large:active	  { padding: 9px 14px 8px; }

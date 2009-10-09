@@ -99,6 +99,35 @@
       .awesome.button.medium.clicked { padding: 6px 10px 5px; }
       .awesome.button.large.clicked { padding: 9px 14px 8px; }
     </style>
+    
+    <script type="text/javascript" charset="utf-8">
+    
+      awesome_buttons = awesome_links = [
+        ['now I\'m awesome', 'awesome medium button'],
+        ['wow, huge!', 'awesome large button'],
+        ['small but awesome', 'awesome small button'],
+        ['so much color', 'awesome green button'],
+        ['end even more', 'awesome blue button'],
+        ['I could do it all day long', 'awesome huge red button'],
+        ['Let\'s do it again!', '']
+      ]
+      awesome_buttons_index = awesome_links_index = 0
+    
+      function awesome_button(o) {
+        o.value = awesome_buttons[awesome_buttons_index][0]
+        o.className = awesome_buttons[awesome_buttons_index][1]
+        awesome_buttons_index++
+        if (awesome_buttons_index == awesome_buttons.length) awesome_buttons_index = 0
+        return false
+      }
+      function awesome_link(o) {
+        o.innerHTML = awesome_buttons[awesome_links_index][0]
+        o.className = awesome_links[awesome_links_index][1]
+        awesome_links_index++
+        if (awesome_links_index == awesome_links.length) awesome_links_index = 0
+        return false
+      }
+    </script>
 	</head>
 	
 	<body>
@@ -111,7 +140,12 @@
 		
 		  <p>
 		    In addition to <a href="http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba">the original from ZERB</a>,
-		    we have an awesome mouseover and clicked state - with css and one graphic only!
+		    we have an awesome mouseover and clicked state - with css and one graphic only!<br />
+		    Just click this button and the link and see for yourself! And <a href="http://www.elctech.com/core/make-your-buttons-look-super-awesome">let us know what you think!</a>
+		  </p>
+		  
+		  <p style="margin-top: 2em">
+		    <input type="button" name="some_name" value="I'm just a button - Click me" onclick="return awesome_button(this)"> | <a href="#" onclick="return awesome_link(this)">I'm just a link - Click me</a>
 		  </p>
 			
 			
