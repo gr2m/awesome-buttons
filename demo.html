@@ -4,12 +4,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
-		<title>Awesome Buttons Demo</title>
+		<title>Even More Awesome Buttons</title>
 		<meta http-equiv="Content-Language" content="en-us" />
 	
 	  <link href="awesome-buttons.css" media="all" rel="stylesheet" type="text/css" />
 		
 		<style type="text/css">
+		  * {
+		    margin: 0;
+		    padding: 0;
+		  }
 		  body {
 		    background: #FFF;
 		    color:  #111;
@@ -22,19 +26,38 @@
 		  h1 {
 		    font-size: 2em;
 		    font-weight: normal;
-		    border-bottom: 2px solid #111;
 		    margin: 0;
+		    padding: 1em 0 1px;
+		    background: #222;
+		    color: #FFF;
 		  }
+  		h1 .center {
+  		  display: block;
+		    width: 960px;
+		    margin: 0 auto 1em;
+		    text-align: center;
+  		}
+    		h1 a {
+    		  color: #FFF;
+    		}
   		h1 small {
   		  font-size: .4em;
+  		}
+  		h2 {
+  		  margin: 2em 0 0;
+  		  text-align: center;
+		    border-bottom: 2px solid #111;
   		}
 		  a {
 		    color: #111;
 		  }
+		  p {
+		    padding: .3em 0;
+		  }
 		  
 		  .light, .dark {
 		    text-align: center;
-		    padding: 2em 0;
+		    padding: 2em 0 1em;
 		  }
 		  .light {
 		    float: left;
@@ -43,77 +66,100 @@
   		.dark {
   		  float: right;
   		  width:  49.9%;
+  		  color: #FFF;
   		  background: #222;
   		}
   		
-  		.blue.awesome {
-      background-color: #0A50FF;
+  		.awesome.blue {
+      background-color: #0A50FF !important;
       }
-      .red.awesome {
-      background-color: #e33100;
+      .awesome.red {
+      background-color: #e33100 !important;
       }
-      .green.awesome {
-      background-color: #3ACC00;
+      .awesome.green {
+      background-color: #3ACC00 !important;
       }
-		  
+      
+      .normal-hover-active {
+      padding: .5em 0;
+      }
+      .normal-hover-active p {
+        text-align: center;
+        position: relative;
+      }
+      .normal-hover-active.dark {
+        width: 100%;
+        float: none;
+      }
+        
+      .awesome.button.hover         { background-position: 0 -50px; color: #fff; }
+      .awesome.button.clicked       { background-position: 0 100%; -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.7); -webkit-box-shadow: none;  }
+      .awesome.button.small.clicked { padding: 5px 7px 4px; }
+      .awesome.button.medium.clicked { padding: 6px 10px 5px; }
+      .awesome.button.large.clicked { padding: 9px 14px 8px; }
     </style>
 	</head>
 	
 	<body>
 	  
 	  
+		<h1>
+		  <span class="center">Even More Awesome Buttons <small>(based on <a href="http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba">Super Awesome Buttons with CSS3 and RGBA</a> by <a href="http://www.zurb.com">ZERB</a>)</small></span>
+		</h1>
 		<div id="wrapper">
 			
-			<h1>Awesome Buttons Demo <small>(based on <a href="http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba">Super Awesome Buttons with CSS3 and RGBA</a> by <a href="http://www.zurb.com">ZERB</a>)</small></h1>
 			
+			<h2>Normal - hovered - clicked</h2>
+			<div class="normal-hover-active">
+			   <p><a class="awesome medium button">awesome button</a> <a class="awesome medium button hover">awesome hovered button</a> <a class="awesome medium button clicked">awesome clicked button</a></p>
+      </div>
+      <div class="normal-hover-active dark">
+			   <p><a class="awesome medium button">awesome button</a> <a class="awesome medium button hover">awesome hovered button</a> <a class="awesome medium button clicked">awesome clicked button</a></p>
+      </div>
 			
+      
+			<h2>with simple hex Colors</h2>
 			
         <div class="light">
-        <a class="small awesome">Super Awesome Button</a> <br /><br />  
-          <a class="medium awesome">Super Awesome Button</a> <br /><br />
-          <a class="large awesome">Super Awesome Button</a> <br /><br />
+          <p>#0A50FF</p>
+        <p><a class="awesome small blue button">Super Awesome Button</a></p>
+          <p><a class="awesome medium blue button">Super Awesome Button</a></p>
+            <p><a class="awesome large blue button">Super Awesome Button</a></p>
         </div>
 
         <div class="dark">
-          <a class="large awesome">Super Awesome Button</a> <br /><br />
-          <a class="medium awesome">Super Awesome Button</a> <br /><br />
-          <a class="small awesome">Super Awesome Button</a> <br /><br />
+          <p>#0A50FF</p>
+          <p><a class="awesome large blue button">Super Awesome Button</a></p>
+          <p><a class="awesome medium blue button">Super Awesome Button</a></p>
+          <p><a class="awesome small blue button">Super Awesome Button</a></p>
         </div>
 			
         <div class="light">
-        <a class="small awesome blue">Super Awesome Button</a> <br /><br />
-          <a class="medium awesome blue">Super Awesome Button</a> <br /><br />
-            <a class="large awesome blue">Super Awesome Button</a> <br /><br />
+        <p>#E33100</p>
+        <p><a class="awesome small red button">Super Awesome Button</a></p>
+        <p><a class="awesome medium red button">Super Awesome Button</a></p>
+          <p><a class="awesome large red button">Super Awesome Button</a></p>
         </div>
 
         <div class="dark">
-          <a class="large awesome blue">Super Awesome Button</a> <br /><br />
-          <a class="medium awesome blue">Super Awesome Button</a> <br /><br />
-          <a class="small awesome blue">Super Awesome Button</a> <br /><br />
+        <p>#E33100</p>
+          <p><a class="awesome large red button">Super Awesome Button</a></p>
+          <p><a class="awesome medium red button">Super Awesome Button</a></p>
+          <p><a class="awesome small red button">Super Awesome Button</a></p>
         </div>
 			
         <div class="light">
-        <a class="small awesome red">Super Awesome Button</a> <br /><br />
-        <a class="medium awesome red">Super Awesome Button</a> <br /><br />
-          <a class="large awesome red">Super Awesome Button</a> <br /><br />
+        <p>#3ACC00</p>
+        <p><a class="awesome small green button">Super Awesome Button</a></p>  
+          <p><a class="awesome medium green button">Super Awesome Button</a></p>
+          <p><a class="awesome large green button">Super Awesome Button</a></p>
         </div>
 
         <div class="dark">
-          <a class="large awesome red">Super Awesome Button</a> <br /><br />
-          <a class="medium awesome red">Super Awesome Button</a> <br /><br />
-          <a class="small awesome red">Super Awesome Button</a> <br /><br />
-        </div>
-			
-        <div class="light">
-        <a class="small awesome green">Super Awesome Button</a> <br /><br />  
-          <a class="medium awesome green">Super Awesome Button</a> <br /><br />
-          <a class="large awesome green">Super Awesome Button</a> <br /><br />
-        </div>
-
-        <div class="dark">
-          <a class="large awesome green">Super Awesome Button</a> <br /><br />
-          <a class="medium awesome green">Super Awesome Button</a> <br /><br />
-          <a class="small awesome green">Super Awesome Button</a> <br /><br />
+        <p>#3ACC00</p>
+          <p><a class="awesome large green button">Super Awesome Button</a></p>
+          <p><a class="awesome medium green button">Super Awesome Button</a></p>
+          <p><a class="awesome small green button">Super Awesome Button</a></p>
         </div>
 			
 		</div>
