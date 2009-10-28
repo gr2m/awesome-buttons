@@ -28,13 +28,13 @@ a.button.awesome {
   font-style: normal; 
   font-weight: bold; 
   line-height: 1; 
+  text-align: center;
   
   padding: 5px 10px 6px;
   font-size: 13px;
   
   /* IE only stuff */
   border-bottom: 1px solid transparent\9;
-  
   
   /* not all browser support these, but who cares? */
   text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
