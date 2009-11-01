@@ -9,13 +9,3 @@ Read there blog post for more information:
 h2. Demo 
 
 "See the buttons in action":http://www.zurb.com/blog_uploads/0000/0485/buttons-02.html
-
-
-h2. Install as Plugin for Rails
-
-go to your public folder and run
-
-<pre>
-$ git clone git://github.com/gr2m/awesome-buttons.git
-$ rm -rf .git
-</pre>
