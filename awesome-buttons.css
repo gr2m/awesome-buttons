@@ -69,6 +69,12 @@ a.button.awesome {
 	background: transparent;
 }
 
+.awesome:focus {
+  outline: 0;
+}
+button.awesome:focus,
+input.awesome:focus,
+a.button.awesome:focus,
 button.awesome:hover,
 input.awesome:hover,
 a.button.awesome:hover {
