@@ -87,20 +87,21 @@ input.awesome:active,
 a.button.awesome:active	{ 
   background-position: 0 100%; 
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
-  /* unfortunately, Safari seems not to support inset yet */
-  -webkit-box-shadow: none;
-  /* note: but Chrome does! */
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important;
   
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=1) !important;
   #border: 1px solid transparent;
   #border-width: 0 1px 1px 0;
+  
 }
-/* Safari doesn't support inset box shadow, but chrome does! */
-/* see: http://www.catswhocode.com/blog/15-techniques-and-tools-for-cross-browser-css-coding */
-body:nth-of-type(1) button.awesome:active,
-body:nth-of-type(1) input.awesome:active,
-body:nth-of-type(1) a.button.awesome:activ{
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7);
+
+/* Safari doesn't support inset box shadow */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  button.awesome:active,
+  input.awesome:active,
+  a.button.awesome:active	{ 
+    -webkit-box-shadow: none;
+  }
 }
 
 button.awesome.small,         input.awesome.small,          a.button.awesome.small 	        { padding: 4px 7px 5px; font-size: 10px; }
