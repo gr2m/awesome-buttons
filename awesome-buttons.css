@@ -34,7 +34,6 @@ a.button.awesome {
   font-size: 13px;
   
   /* IE only stuff */
-  #margin: 0 -2px -2px 0;
   
   /* not all browser support these, but who cares? */
   text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
@@ -43,12 +42,11 @@ a.button.awesome {
   -webkit-border-radius: 5px; 
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
   
   /* one image for all states 
      see http://www.alistapart.com/articles/sprites */
-  background-image: url(awesome-overlay-sprite.png);
-  background-position: 0 0;
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.2), rgba(150,150,150,.2), rgba(0,0,0,.0));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.2)), color-stop(0.5, rgba(150,150,150,.2)), to(rgba(0,0,0,.0)));
   
   /* cross browser inline block hack 
      see http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
@@ -58,8 +56,10 @@ a.button.awesome {
   *display: inline !important;
   position: relative;
   
-  /* help IE to calm down a bit */
+  /* IE luv */
   zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
+  #margin: 0 -2px -2px 0;
   
   /*disable text selection (Firefox only)*/
   -moz-user-select: none;
@@ -78,21 +78,21 @@ a.button.awesome:focus,
 button.awesome:hover,
 input.awesome:hover,
 a.button.awesome:hover {
-  background-position: 0 -50px; 
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.4), rgba(150,150,150,.3), rgba(0,0,0,.0));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.4)), color-stop(0.5, rgba(150,150,150,.3)), to(rgba(0,0,0,.0)));
+  #filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#50ffffff,endColorstr=#20000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
   color: #fff;
   outline: 0; /*remove dotted line*/
 }
 button.awesome:active,
 input.awesome:active,
 a.button.awesome:active	{ 
-  background-position: 0 100%; 
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,.2), rgba(150,150,150,.2), rgba(255,255,255,.2));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,.2)), color-stop(0.5, rgba(150,150,150,.2)), to(rgba(255,255,255,.2)));
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important;
   
-  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=1) !important;
-  #border: 1px solid transparent;
-  #border-width: 0 1px 1px 0;
-  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#20000000,endColorstr=#50ffffff) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=1);
 }
 
 /* Safari doesn't support inset box shadow */
