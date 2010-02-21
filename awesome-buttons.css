@@ -30,7 +30,9 @@
   text-align: cente !important;
   text-decoration: none !important; 
   
-  /* IE only stuff */
+  /* vertical margin is the oposite of button's awesomeness */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   
   /* not all browser support these, but who cares? */
   text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25) !important; 
