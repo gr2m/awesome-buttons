@@ -15,7 +15,6 @@
 
 /* the awesome size gets set here. Feel Free to add new sizes, like .awesome.small or .small.large   */
 .awesome        { padding: 5px 10px 6px !important; font-size: 13px !important; }
-.awesome:focus	{ padding: 6px 10px 5px !important; }
 .awesome:active	{ padding: 6px 10px 5px !important; }
 
 /* Touch the rest at your onw risk. */
