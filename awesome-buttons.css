@@ -62,6 +62,15 @@
   /*disable text selection (Firefox only)*/
   -moz-user-select: none;
 }
+
+/* OPERA only
+   if there is no border set, Opera shows a transparent background-color if border-radius is set. */
+@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0) {
+  input.awesome {
+    border: 1px solid RGBa(0,0,0,0) !important;
+  }
+}
+
 /* hide selection background color */
 .awesome::selection {
 	background: transparent;
