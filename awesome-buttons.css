@@ -41,10 +41,10 @@
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important; 
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
   
-  /* one image for all states 
-     see http://www.alistapart.com/articles/sprites */
+  /* who needs images these days? */
   background-image: -moz-linear-gradient(top, rgba(255,255,255,.2), rgba(150,150,150,.2), rgba(0,0,0,.0)) !important;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.2)), color-stop(0.5, rgba(150,150,150,.2)), to(rgba(0,0,0,.0))) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
   
   /* cross browser inline block hack 
      see http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
@@ -56,7 +56,6 @@
   
   /* IE luv */
   zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);
   
   /*disable text selection (Firefox only)*/
   -moz-user-select: none;
