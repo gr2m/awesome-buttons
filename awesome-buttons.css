@@ -35,10 +35,12 @@
   
   /* not all browser support these, but who cares? */
   text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25) !important; 
-  border-radius: 5px !important; 
-  -moz-border-radius: 5px !important; 
+  
+          border-radius: 5px !important; 
+     -moz-border-radius: 5px !important; 
   -webkit-border-radius: 5px !important; 
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important; 
+          box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important; 
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important; 
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
   
   /* who needs images these days? */
@@ -80,10 +82,11 @@
 .awesome:active	{ 
   background-image: -moz-linear-gradient(top, rgba(0,0,0,.2), rgba(150,150,150,.2), rgba(255,255,255,.2)) !important;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,.2)), color-stop(0.5, rgba(150,150,150,.2)), to(rgba(255,255,255,.2))) !important;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important; 
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important;
-  
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#20000000,endColorstr=#50ffffff) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=1);
+        
+          box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important;
+     -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important; 
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7) !important;
 }
 
 /* Safari doesn't support inset box shadow, so we better remove it */
