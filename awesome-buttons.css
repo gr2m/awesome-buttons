@@ -24,9 +24,9 @@
 .awesome {
   border: 0 !important;
   cursor: pointer !important;
+  font: inherit !important;
   font-style: normal !important;
   font-weight: bold !important;
-  font: inherit !important;
   line-height: 1 !important;
   position: relative !important;
   text-align: center !important;
@@ -64,6 +64,11 @@
 
   /* disable text selection (Firefox only) */
   -moz-user-select: none;
+  
+  /* no text selection for iOS */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 /* OPERA only
