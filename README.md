@@ -4,4 +4,4 @@
 
 ## Credits
 
-Awesome buttons have been originally created by [the great guys from ZURB](http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba)
+Awesome buttons have been originally created by [the great folks at ZURB](http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba)
