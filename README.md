@@ -1,6 +1,6 @@
 # Super Awesome Buttons with pure CSS3 and RGBA
 
-[See the buttons in action](http://gr2m.github.com/awesome-buttons/)
+[See the buttons in action](http://gr2m.github.io/awesome-buttons/)
 
 ## Credits
 
